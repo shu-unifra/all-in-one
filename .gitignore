@@ -1,0 +1,16 @@
+# Foundry
+cache/
+out/
+broadcast/
+
+# Dependencies
+lib/
+
+# Environment
+.env
+
+# Slither
+slither.db.json
+
+# Logs
+*.log
