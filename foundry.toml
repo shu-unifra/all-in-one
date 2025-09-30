@@ -7,8 +7,10 @@ legacy = true # Use legacy transactions for networks that do not support EIP-155
 
 # It is strongly recommended to use environment variables for security.
 # You can use either a private key or a mnemonic. Foundry will prioritize the private key if both are set.
-#private_key = "${PRIVATE_KEY}"
-mnemonic = "${MNEMONIC}"
+private_key = "0x713137ab6bfaf197200b4f1e033bb3abadaf76564f6b2ca4f00aaa90c3c8efe5"
+sender = '0xd98f41da0f5b229729ed7bf469ea55d98d11f467' 
+#mnemonic = "${MNEMONIC}"
+
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
 
@@ -16,13 +18,22 @@ mnemonic = "${MNEMONIC}"
 #                           CHAIN CONFIG                         #
 ################################################################
 
-[rpc_endpoints]
-merlin-testnet = "https://testnet-rpc.merlinchain.io/"
-merlin-mainnet = "https://rpc.merlinchain.io"
-dogeos-testnet = "https://dogeos-testnet.unifra.io/v1/${DOGEOS_TESTNET_RPC_KEY}"
-dogeos-mainnet = "https://dogeos-mainnet.unifra.io/v1/"
-
-[etherscan]
-merlin-testnet = { key = "${MERLIN_TESTNET_L2SCAN_API_KEY}", url = "https://testnet.merlinscan.io/api", chain = 686868 }
-merlin-mainnet = { key = "${MERLIN_MAINNET_L2SCAN_API_KEY}", url = "https://scan.merlinchain.io/api", chain = 4200 }
-dogeos-testnet = { key = "${DOGEOS_TESTNET_L2SCAN_API_KEY}", url = "https://dogeos-testnet.l2scan.co/api/", chain = 0x5fdaf3}
+#[rpc_endpoints]
+#merlin-testnet = "https://testnet-rpc.merlinchain.io/"
+#merlin-mainnet = "https://rpc.merlinchain.io"
+#dogeos-testnet = "https://dogeos-testnet.unifra.io/v1/${DOGEOS_TESTNET_RPC_KEY}"
+#dogeos-mainnet = "https://dogeos-mainnet.unifra.io/v1/"
+#
+#[etherscan]
+#merlin-testnet = { key = "${MERLIN_TESTNET_L2SCAN_API_KEY}", url = "https://testnet.merlinscan.io/api", chain = 686868 }
+#merlin-mainnet = { key = "${MERLIN_MAINNET_L2SCAN_API_KEY}", url = "https://scan.merlinchain.io/api", chain = 4200 }
+#dogeos-testnet = { key = "${DOGEOS_TESTNET_L2SCAN_API_KEY}", url = "https://dogeos-testnet.l2scan.co/api/", chain = 0x5fdaf3}
+#
+#[profile.merlin-testnet]
+#chain_id = 686868
+#
+#[profile.merlin-mainnet]
+#chain_id = 4200
+#
+#[profile.dogeos-testnet]
+#chain_id = 628931

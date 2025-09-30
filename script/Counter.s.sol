@@ -1,23 +1,26 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.19;
 
-import {Script} from "forge-std/Script.sol";
+import {Script} from "lib/forge-std/src/Script.sol";
 import {Counter} from "../src/Counter.sol";
 
 contract CounterScript is Script {
-    Counter public counter;
-
     function setUp() public {}
 
-    function run() public {
+    function run() public returns (address) {
+        
         vm.startBroadcast();
+        
 
-        counter = new Counter();
+        Counter counter = new Counter();
 
         vm.stopBroadcast();
+        return address(counter);
     }
 
-    function incress() public {
-        Counter("0x3B15f34b1867510aAB20A81B1347D1977FA3c558").increment();
+    function increase(address _counterAddress) public {
+        vm.startBroadcast();
+        Counter(_counterAddress).increment();
+        vm.stopBroadcast();
     }
 }
