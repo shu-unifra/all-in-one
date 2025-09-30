@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.19;
 
-import "forge-std/Test.sol";
-import "../src/HelloWorld.sol";
+import {Test} from "forge-std/Test.sol";
+import {HelloWorld} from "../src/HelloWorld.sol";
 
 contract HelloWorldTest is Test {
     HelloWorld public hello;
@@ -11,7 +11,7 @@ contract HelloWorldTest is Test {
         hello = new HelloWorld();
     }
 
-    function test_InitialGreeting() public {
+    function test_InitialGreeting() public view {
         assertEq(hello.greeting(), "Hello World");
     }
 
